@@ -14,6 +14,10 @@ MOA (Massive Online Analysis) it the base framework that we used for ARDEV.
 * [Airline Dataset](https://drive.google.com/drive/folders/0B6arI8oRbapXZDVVbmE3WUc1SWs?usp=sharing) - Airline Dataset (9 GB).
 * [Traffic Dataset](https://drive.google.com/open?id=0B6arI8oRbapXZl82bDNfazNNOUE) - Traffic Dataset (25 GB)
 
+### Application
+Please download this application
+* [moa-ardev.jar](https://drive.google.com/file/d/1I-mj1t6r0Fb9CAMZNNSjixNgYGj7Is8b/view?usp=sharing) - Application jar file (25 MB).
+
 ### Script to run LearnModel FIMT-DD-ARDEV
 ```
 java -cp moa-ardev.jar moa.DoTask "LearnModelRegression -l trees.FIMTDD -s (ArffFileStream -f (traffic.arff)) -O (ardev-traffic-demand.moa) -m 100000000"
