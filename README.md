@@ -1,4 +1,4 @@
-# [Application]- Average Restrain Divider of Evaluation Value (ARDEV)
+# Application - Average Restrain Divider of Evaluation Value (ARDEV)
 
 ## Guide
 
@@ -9,13 +9,18 @@ MOA (Massive Online Analysis) it the base framework that we used for ARDEV.
 * [Massive Online Analysis - Home Page](https://moa.cms.waikato.ac.nz/) - Massive Online Analysis - Home Page.
 * [Massive Online Analysis - Github Page](https://github.com/Waikato/moa) - Massive Online Analysis - Github Page
 
+### Datasets
+MOA (Massive Online Analysis) it the base framework that we used for ARDEV.
+* [Airline Dataset](https://drive.google.com/drive/folders/0B6arI8oRbapXZDVVbmE3WUc1SWs?usp=sharing) - Airline Dataset (9 GB).
+* [Traffic Dataset](https://drive.google.com/open?id=0B6arI8oRbapXZl82bDNfazNNOUE) - Traffic Dataset (25 GB)
+
 ### Script to run LearnModel FIMT-DD-ARDEV
 ```
-java -cp moa-ardev.jar moa.DoTask "LearnModelRegression -l trees.FIMTDD -s (ArffFileStream -f (combine-traffic-demand.arff)) -O (ardev-traffic-demand.moa) -m 100000000"
+java -cp moa-ardev.jar moa.DoTask "LearnModelRegression -l trees.FIMTDD -s (ArffFileStream -f (traffic.arff)) -O (ardev-traffic-demand.moa) -m 100000000"
 ```
-### Script to test LearnModel FIMT-DD-ARDEV
+### Script to test EvaluateModel FIMT-DD-ARDEV
 ```
-java -cp moa-ardev.jar moa.DoTask "EvaluateModelRegression -m file:ardev-traffic-demand.moa -s (ArffFileStream -f (combine-traffic-demand.arff)) -i 100000"
+java -cp moa-ardev.jar moa.DoTask "EvaluateModelRegression -m file:ardev-traffic-demand.moa -s (ArffFileStream -f (traffic.arff)) -i 100000"
 ```
 
 ### Parameters in LearnModelRegression
